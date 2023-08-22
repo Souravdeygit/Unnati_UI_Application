@@ -1,0 +1,121 @@
+thead tr th{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+tbody tr{
+    border: none !important;
+}
+tbody tr td{
+    border: none !important;
+}
+
+tbody > tr > td, tbody > tr > th {
+    overflow: hidden;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    white-space: nowrap;
+}
+
+.table-responsive>.table>tbody>tr>td {
+    vertical-align: middle;
+     overflow: hidden;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.table-responsive>.table>tbody>th>td {
+  vertical-align: middle;
+}
+
+.table-responsive .table {
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+}
+.table>thead>tr>th {
+    white-space: nowrap;
+}
+
+.table-responsive>.fixed-column {
+    right: 0;
+    top: 0px;
+    background: #ffffff;
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    border-top: 0px solid ;
+    border-left: 1px solid #ddd; 
+    
+}
+.table-responsive>.fixed-column th, td {
+    visibility: visible!important;
+    text-align: center!important;
+}
+/* // @media(min-width:767px) {
+//     .table-responsive>.fixed-column {
+//        display: none;
+//     }
+// } */
+@media(max-width:768px) {
+    .table-responsive>.fixed-column {
+        top: 1px;
+       /* //display: none; */
+    }
+    .table-responsive>.table>tbody>tr>td {
+        white-space: inherit;
+    } 
+}
+
+
+.table-responsive::-webkit-scrollbar {
+    background: lightyellow;
+    width: 12px;
+}
+.table-responsive::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+    background: gray;
+}
+.table-responsive:hover::-webkit-scrollbar {
+    background: yellow;
+}
+
+th{
+   border: 1px solid;
+   height:30px;
+   background-repeat:no-repeat;
+}
+
+td{
+	text-indent:5px;
+	color:#444;
+	border-bottom:1px solid #bbb;
+	border-left:1px solid #bbb;
+}
+
+td.disabled, th.disabled{
+    width:100px;
+    text-align: center;
+    min-width:100px;
+}
+
+td.left{
+	border-left:1px solid #2e638e;
+}
+.JColResizer td, .JColResizer th {
+    overflow: hidden;
+    /* // padding-left: 0!important; */
+    /* // padding-right: 0!important; */
+    overflow: hidden;
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+}
+.JColResizer td {
+    text-overflow: ellipsis;
+}
+
+.JCLRgrip .JColResizer {
+    cursor: ew-resize!important;
+}
+
+.no-resize {
+    width: 100%!important;
+}

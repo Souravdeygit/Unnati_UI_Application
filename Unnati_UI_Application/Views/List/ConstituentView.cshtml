@@ -1,0 +1,856 @@
+﻿
+@{
+    ViewBag.Title = "ConstituentView";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+
+
+
+<section class="layout-body">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="../dashboard.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Constituent</li>
+            </ul>
+        </nav>
+        <div class="row show-hide-panel panel-active list-sec-cont">
+            <div class="col-md-12 animate__animated animate__zoomIn">
+                <div class="card-wrap shadow-main">
+                    <div class="card-wrap-body cus-body-wrap">
+                        <div class="all-wrap mt-2 animate__animated animate__zoomIn">
+
+                            <div class="card tab-panel mt-3">
+                                <div class="row">
+                                    <div class="col-md-12 tab-sec">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li>
+                                                <a href="#contact_01" class="active" data-toggle="tab">List 1</a> <span class="custom-danger-btn"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                            </li>
+                                            <!-- <li><a href="#contact_02" data-toggle="tab">Molly Lewis</a>  <span class="custom-danger-btn"> <i class="fa fa-minus-circle" aria-hidden="true"></i> </span>  -->
+
+                                            <li>
+                                                <a href="#" class="add-contact"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="contact_01">
+                                                <div class="list-pannel">
+                                                    <div class="constituent-stts">
+                                                        <p><span>67</span> Records</p>
+                                                    </div>
+                                                    <div class="constituent-contrl-1 form hide-content">
+                                                        <div class="ul d-flex">
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-success-btn" id="" name=""><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn primary-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#column-modal"><i class="fa fa-columns" aria-hidden="true"></i> Columns</button>
+                                                            </li>
+                                                            <!-- <li class="me-3">
+                                                                <button type="button" class="custom-btn primary-btn" id="" name=""><i class="fa fa-briefcase" aria-hidden="true"></i> Apply Workflow</button>
+                                                            </li> -->
+                                                            <!-- <li class="me-3">
+                                                                <div class="dropdown">
+                                                                    <a class="custom-btn primary-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Add/Exclude
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Add To This List</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Exclude From This List</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li> -->
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" style="border-radius: 50%;"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <div class="custom-scrch-bx">
+                                                                    <input type="text" class="form-control search-input" placeholder=""><span class="custom-search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                                </div>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                    <div class="constituent-contrl-2 form show-content">
+                                                        <div class="row">
+                                                            <!-- <li class="me-3"><p>Filters:</p></li> -->
+                                                            <div class="col-md-2">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">
+                                                                    <i class="fa fa-filter" aria-hidden="true"></i>
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="">Action Status</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="constituent-contrl-mobile form">
+                                                        <div class="row">
+
+                                                            <div class="col-12">
+                                                                <button type="button" class="custom-btn primary-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#column-modal"><i class="fa fa-columns" aria-hidden="true"></i> Coloumns</button>
+                                                            </div>
+                                                            <!-- <div class="col-12 mt-3">
+                                                                <button type="button" class="custom-btn primary-btn custom-pri-btn" id="" name=""><i class="fa fa-briefcase" aria-hidden="true"></i> Apply Workflow</button>
+                                                            </div>
+
+                                                            <div class="col-12 mt-3">
+                                                                <div class="dropdown">
+                                                                    <a class="custom-btn custom-pri-btn primary-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Add/Exclude
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Add To This List</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Exclude From This List</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div> -->
+                                                            <div class="col-5 mt-3">
+                                                                <button type="button" class="custom-btn custom-success-btn custom-pri-btn" id="" name=""><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+
+                                                            </div>
+                                                            <div class="col-4 mt-3 p-0">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" style="border-radius: 50%;"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                                            </div>
+                                                            <div class="col-12 mt-3">
+                                                                <div class="custom-scrch-bx">
+                                                                    <input type="text" class="form-control search-input" placeholder=""><span class="custom-search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="constituent-contrl-2 form hide-content">
+                                                        <div class="ul d-flex">
+                                                            <!-- <li class="me-3"><p>Filters:</p></li> -->
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">
+                                                                    <i class="fa fa-filter" aria-hidden="true"></i>
+                                                                </button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">Constituent Code</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">Any Gift</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">Constituent Type</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">Address</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">Education</button>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                    <div class="main_panel table-responsive" id="constituent-details-view">
+                                                        <div class="JCLRgrips" style="width: 1306.84px;"><div class="JCLRgrip JCLRdisabledGrip" style="left: 140.219px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 345.125px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 472.766px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 664.563px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 798.61px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 919.156px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 1043.2px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 1171.92px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip JCLRLastGrip" style="left: 1307.34px; height: 31px;"><div class="JColResizer"></div></div></div><table class="table table-bordered main-sec-desktop JCLRFlex JColResizer" style="text-align: left; min-width: 1306.84px; width: 1306.84px;" id="JColResizer0">
+                                                            <thead class="header-bg">
+                                                                <tr>
+                                                                    <th scope="col" style="width: 138.719px;"><label></label></th>
+                                                                    <th scope="col" style="width: 204.906px;"><label>Constituent Summary</label></th>
+                                                                    <th scope="col" style="width: 127.641px;"><label>Assigned To</label></th>
+                                                                    <th scope="col" style="width: 191.812px;"><label>Constituent Code</label></th>
+                                                                    <th scope="col" style="width: 134.047px;"><label>Lifetime Giving</label></th>
+                                                                    <th scope="col" style="width: 120.547px;"><label>First Gift</label></th>
+                                                                    <th scope="col" style="width: 124.047px;"><label>Latest Gift</label></th>
+                                                                    <th scope="col" style="width: 128.719px;"><label>Greatest Gift</label></th>
+                                                                    <th scope="col" style="width: 135.406px;"><label>Prospect Status</label></th>
+
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="header-body-bg">
+                                                                <tr>
+                                                                    <!-- <th scope="row">1</th> -->
+                                                                    <td class="d-flex">
+                                                                        <div class="kebab">
+                                                                            <button class="kebab-btn-round" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu kebab-dropdwn" aria-labelledby="dropdownMenuButton1" style="">
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal5">Add Action</button></li>
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal8">Add Note</button></li>
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal12">Add Opportunity</button></li>
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal16-1">Assign Fundraiser</button></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="media"><img src="../images/musk.jpg" width="40" class="dropbtn" role="button"></div>
+
+                                                                    </td>
+                                                                    <td style="z-index: -1;">
+                                                                        <div class="media">
+                                                                            <div class="media-body view-application-body pl-2">
+                                                                                <h5><a href="#" class="highlight-txt" data-bs-toggle="modal" data-bs-target="#user-name-mdl-1">John Matt</a></h5>
+                                                                                <label>Country - <span>United States</span></label><br>
+                                                                                <label>Email Id - <span>matt@jon.com</span></label><br>
+                                                                                <label>Phone No. - <span>085646 83326</span></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="z-index: -1;"><label class="frm-label-val"></label></td>
+                                                                    <td style="z-index: -1;"><label class="frm-label-val">Student</label></td>
+                                                                    <td style="z-index: -1;"><label class="frm-label-val">0.00 <span>Rs</span></label></td>
+                                                                    <td style="z-index: -1;"><label class="frm-label-val"></label></td>
+                                                                    <td style="z-index: -1;"><label class="frm-label-val"></label></td>
+                                                                    <td style="z-index: -1;"><label class="frm-label-val"></label></td>
+                                                                    <td style="z-index: -1;"><label class="frm-label-val"></label></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <!-- <th scope="row">1</th> -->
+                                                                    <td class="d-flex">
+                                                                        <div class="kebab">
+                                                                            <button class="kebab-btn-round" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu kebab-dropdwn" aria-labelledby="dropdownMenuButton1" style="">
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal5">Add Action</button></li>
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal8">Add Note</button></li>
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal12">Add Opportunity</button></li>
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal16-1">Assign Fundraiser</button></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="media">
+                                                                            <img src="../images/musk.jpg" width="40" class="dropbtn" role="button">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="media">
+                                                                            <div class="media-body view-application-body pl-2">
+                                                                                <h5><a href="#" class="highlight-txt" data-bs-toggle="modal" data-bs-target="#user-name-mdl-2">Microsoft</a></h5>
+                                                                                <label>Country - <span>United States</span></label><br>
+                                                                                <label>Email Id - <span>matt@jon.com</span></label><br>
+                                                                                <label>Phone No. - <span>085646 83326</span></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td></td>
+                                                                    <td><label class="frm-label-val">Corporate</label></td>
+                                                                    <td><label class="frm-label-val">0.00 Rs</label></td>
+
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="main-sec-mobile">
+                                                            <div class="header-bg">
+
+                                                            </div>
+                                                            <div class="header-body-bg">
+                                                                <div class="row">
+                                                                    <div class="col-md-1">
+                                                                        <div class="d-flex" style="justify-content: center;">
+                                                                            <div class="media"><img src="../images/musk.jpg" width="40" class="dropbtn" role="button"></div>
+                                                                            <div class="kebab">
+                                                                                <button class="kebab-btn-round" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                                </button>
+                                                                                <ul class="dropdown-menu kebab-dropdwn" aria-labelledby="dropdownMenuButton1">
+                                                                                    <li><button class="dropdown-iteam">Add Action</button></li>
+                                                                                    <li><button class="dropdown-iteam">Add Note</button></li>
+                                                                                    <li><button class="dropdown-iteam">Add Opportunity</button></li>
+                                                                                    <li><button class="dropdown-iteam">Assign Fundraiser</button></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2 ps-0">
+                                                                        <div class="media">
+                                                                            <div class="media-body view-application-body pl-2">
+                                                                                <h5><a href="#" data-bs-toggle="modal" data-bs-target="#user-name-mdl-1">John Matt</a></h5>
+                                                                                <label>Country - <span>United States</span></label>
+                                                                                <label>Email Id - <span>matt@jon.com</span></label>
+                                                                                <label>Phone No. - <span>085646 83326</span></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-9">
+                                                                        <div class="row">
+                                                                            <div class="col-md-3 mt-2">
+                                                                                <label class="frm-label pb-0">Education</label>
+                                                                                <label class="frm-label-val-2">Something</label>
+                                                                            </div>
+                                                                            <div class="col-md-3 mt-2">
+                                                                                <label class="frm-label pb-0">Organization Position</label>
+                                                                                <label class="frm-label-val-2">CEO</label>
+                                                                            </div>
+                                                                            <div class="col-md-3 mt-2">
+                                                                                <label class="frm-label pb-0">Constituent Code</label>
+                                                                                <label class="frm-label-val-2">Private</label>
+                                                                            </div>
+                                                                            <div class="col-md-3 mt-2">
+                                                                                <label class="frm-label pb-0">Lifetime Giving</label>
+                                                                                <label class="frm-label-val-2">0.00 Rs.</label>
+                                                                            </div>
+                                                                            <div class="col-md-3 mt-2">
+                                                                                <label class="frm-label pb-0">Greatest Gift</label>
+                                                                                <label class="frm-label-val-2">Something</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="collapse mt-3" id="collapseExample">
+                                                                    <div class="expandAllBtn">
+                                                                        <button type="button" class="btn expand-btn showAll" id="expandAll">Expand All</button>
+                                                                        <button type="button" class="btn collapse-btn hideAll" id="collapseAll" style="display: none;">Collapse All</button>
+                                                                    </div>
+                                                                    <div class="">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---MOdal Section-Start-->
+<!-- right side modal 5 -->
+<div class="modal modal-right fade" id="user1modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Action</h5>
+                <button type="button" class="btn-normal modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-3 col-12 action-tab">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="left-tab-heading active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Actions-1" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Action Details</button>
+                            <button class="left-tab-heading" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Actions-2" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Attachments</button>
+                            <!-- <button class="left-tab-heading" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Actions-3" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Custom Fields</button> -->
+                            <button class="left-tab-heading" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Actions-4" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Copy To</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <!-- action -->
+                            <div class="tab-pane fade show active" id="v-pills-Actions-1" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <div class="right-modal-form">
+                                    <form id="_formid-Action">
+
+                                        <div class="col-md-10 col-12 right-div-cntrl">
+                                            <label for="" class="frm-label">Catagory<span style="color: red;">*</span></label>
+                                            <div class="row">
+                                                <div class="col-md-2 col-3 p-0" style="text-align: center;">
+                                                    <li>
+                                                        <button type="button" class="right-submit-btn custom-btn custom-pri-btn btn-catag" id="btn-cat-meeting" name="MEETING"><i class="fa fa-comments" aria-hidden="true"></i></button>
+                                                        <label for="" class="frm-label">Meeting</label>
+                                                        <input type="hidden" id="inpt-meeting" />
+                                                    </li>
+                                                </div>
+
+                                                <div class="col-md-2 col-2" style="text-align: center;">
+                                                    <li>
+                                                        <button type="button" class="right-submit-btn custom-btn custom-pri-btn btn-catag" id="btn-cat-phn-call" name="CALL"><i class="fa fa-phone" aria-hidden="true"></i></button>
+                                                        <label for="" class="frm-label">Phone Call</label>
+                                                        <input type="hidden" id="inpt-call" />
+                                                    </li>
+                                                </div>
+
+                                                <div class="col-md-2 col-3" style="text-align: center;">
+                                                    <li>
+                                                        <button type="button" class="right-submit-btn custom-btn custom-pri-btn btn-catag" id="btn-cat-Email" name="EMAIL"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+                                                        <label for="" class="frm-label">Email</label>
+                                                        <input type="hidden" id="inpt-email" />
+                                                    </li>
+                                                </div>
+
+                                                <div class="col-md-2 col-2" style="text-align: center;">
+                                                    <li>
+                                                        <button type="button" class="right-submit-btn custom-btn custom-pri-btn" id="" name=""><i class="fa fa-envelope" aria-hidden="true"></i></button>
+                                                        <label for="" class="frm-label">Mail</label>
+                                                    </li>
+                                                </div>
+
+                                                <div class="col-md-2 col-2" style="text-align: center;">
+                                                    <li>
+                                                        <button type="button" class="right-submit-btn custom-btn custom-pri-btn btn-catag" id="btn-cat-task" name="TASK"><i class="fa fa-tasks" aria-hidden="true"></i></button>
+                                                        <label for="" class="frm-label">Task</label>
+                                                        <input type="hidden" id="inpt-task" />
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-3 col-6 right-div-cntrl">
+                                                <label for="" class="frm-label">Date</label>
+                                                <input type="date" id="input-date" class="form-control-2">
+                                            </div>
+
+                                            <div class="col-md-3 col-6 right-div-cntrl">
+                                                <label for="" class="frm-label">Start Time</label>
+                                                <input type="time" id="inpt-start-time" class="form-control-2">
+                                            </div>
+
+                                            <div class="col-md-3 col-6 right-div-cntrl">
+                                                <label for="" class="frm-label">End Time</label>
+                                                <input type="time" id="inpt-end-time" class="form-control-2">
+                                            </div>
+
+                                            <div class="col-md-3 col-6 right-div-cntrl">
+                                                <label for="" class="frm-label">Summary</label>
+                                                <input type="text" id="inpt-summary" class="form-control-2" placeholder="Enter">
+                                            </div>
+
+                                            <div class="col-md-10 col-10 right-div-cntrl">
+                                                <label for="" class="frm-label">Notes</label>
+                                                <textarea class="form-control-2 custom-textarea" id="txtrea-note" placeholder="Enter"></textarea>
+                                            </div>
+
+
+
+                                            <div class="col-md-5 col-10 right-div-cntrl">
+                                                <input type="checkbox" id="input-check-google-calender" class="" value="SENT_GOOGLE_CALENDER">
+                                                <label for="" class="frm-label-checkbx align-margin-chck">Send To Google Calender</label>
+                                            </div>
+
+                                            <div class="col-md-3 col-6 right-div-cntrl">
+                                                <label for="" class="frm-label">Status</label>
+                                                <select class="form-control-2" id="ddl_status">
+                                                    <option value="0">Select</option>
+                                                    <option value="Option1">Option1</option>
+                                                    <option value="Option2">Option2</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-10 col-12 right-div-cntrl">
+                                                <label for="" class="frm-label">Assign To<span style="color: red;">*</span></label>
+                                                <input type="text" id="inpt-Assign-To" class="form-control-2" placeholder="Search" style="position: relative; padding-right: 20px;"><span class="search-icn-2"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                            </div>
+
+
+                                        </div>
+                                    </form>
+                                    <div class="row">
+                                        <div class="col-md-2 col-4">
+                                            <button type="submit" class="right-submit-btn custom-btn custom-success-btn" id="btn-save-action-details" name="">Submit</button>
+                                        </div>
+                                        <div class="col-md-1 col-4">
+                                            <button type="submit" class="right-submit-btn custom-btn custom-danger-btn" id="" name="">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Attachments-->
+                            <div class="tab-pane fade" id="v-pills-Actions-2" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class="right-modal-form">
+                                    <div class="attachments-cont row">
+                                        <div class=" col-md-6 col-12" style="margin: 0 auto;">
+                                            <h3><i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload Files</h3>
+                                            <div class="drop_box">
+                                                <header>
+                                                    <h4>Select File here</h4>
+                                                </header>
+                                                <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+                                                <input type="file" hidden accept=".doc,.docx,.pdf" id="input-attachment-type" style="display:none;">
+                                                <button type="button" class="btn" id="btn-save-attachement"> Choose File</button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card col-md-12">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- custom feilds -->
+                            <div class="tab-pane fade" id="v-pills-Actions-3" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                <div class="right-modal-form">
+                                    <form>
+                                        <div class="row">
+
+                                            <div class="col-md-6 col-12 right-div-cntrl">
+                                                <label for="" class="frm-label">Catagory</label>
+                                                <select class="form-control-2">
+                                                    <option>Select</option>
+                                                    <option>Campaign</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6 col-12 right-div-cntrl">
+                                                <label for="" class="frm-label">
+                                                    Value/label>
+                                                    <select class="form-control-2">
+                                                        <option>Select</option>
+                                                        <option>Class of 1991 -Legacy Project(L.P.)</option>
+                                                        <option>Class of 1992 -Legacy Project(L.P.)</option>
+                                                        <option>Class of 1993 -Legacy Project(L.P.)</option>
+                                                    </select>
+                                            </div>
+
+                                            <div class="col-md-6 col-12 right-div-cntrl">
+                                                <label for="" class="frm-label">Date</label>
+                                                <input type="date" id="" class="form-control-2">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 right-div-cntrl">
+                                                <label for="" class="frm-label">Comment</label>
+                                                <input type="Text" id="" class="form-control-2" placeholder="Enter Anything About This Feild">
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                    <div class="row">
+                                        <div class="col-md-2 col-4">
+                                            <button type="submit" class="right-submit-btn custom-btn custom-success-btn" id="" name="">Submit</button>
+                                        </div>
+                                        <div class="col-md-1 col-4">
+                                            <button type="submit" class="right-submit-btn custom-btn custom-danger-btn" id="" name="">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- copy to -->
+                            <div class="tab-pane fade" id="v-pills-Actions-4" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                <div class="right-modal-form">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-10 col-12 right-div-cntrl">
+                                                <label for="" class="frm-label">Copy to<span style="color: red;">*</span></label>
+                                                <input type="text" id="input-copy-to" class="form-control-2" placeholder="Search for a Constituent" style="position: relative; padding-right: 20px;"><span class="search-icn-2"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-12 col-12 right-div-cntrl">
+                                                <input type="checkbox" id="checkbx-include-attachement" class="" value="Include_Attachments">
+                                                <label for="" class="frm-label-checkbx">Include Attachments?</label>
+                                            </div>
+
+                                            <div class="col-md-12 col-12 right-div-cntrl">
+                                                <input type="checkbox" id="checkbx-include-custom" class="" value="Include_Custom_Feilds">
+                                                <label for="" class="frm-label-checkbx">Include Custom Feilds?</label>
+                                            </div>
+
+
+                                        </div>
+                                    </form>
+                                    <div class="row">
+                                        <div class="col-md-2 col-4">
+                                            <button type="button" class="right-submit-btn custom-btn custom-success-btn" id="btn-copy-to-action" name="">Submit</button>
+                                        </div>
+                                        <div class="col-md-1 col-4">
+                                            <button type="button" class="right-submit-btn custom-btn custom-danger-btn" id="" name="">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+    </div>
+</div>
+
+<div class="modal modal-right fade" id="user1modal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Note</h5>
+                <button type="button" class="btn-normal modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="right-modal-form">
+                    <form id="formAddConstituentNote">
+                        <div class="row">
+                            <!-- <p>Primary Name Formats</p> -->
+                            <div class="col-md-4 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Type <span style="color: red;">*</span></label>
+                                <select class="form-control-2" name="CONST_NOTE_TYPE" required>
+                                    <option value="0">Select</option>
+                                    <option value="Award">Award</option>
+                                    <option value="Chapter">Chapter</option>
+                                    <option value="Course">Course</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Date <span style="color: red;">*</span></label>
+                                <input type="date" id="" class="form-control-2" name="CONST_NOTE_DATE" required>
+                            </div>
+
+                            <div class="col-md-8 col-12 right-div-cntrl">
+                                <label for="" class="frm-label">Summary</label>
+                                <input type="text" id="" class="form-control-2" placeholder="" name="CONST_NOTE_SUMMARY">
+                            </div>
+
+                            <div class="col-md-8 col-12 right-div-cntrl">
+                                <label for="" class="frm-label">Note</label>
+                                <textarea class="form-control-2 custom-textarea" name="CONST_NOTE_REMARKS"></textarea>
+                            </div>
+                        </div>
+                    </form>
+
+                    <button type="button" class="right-submit-btn custom-btn custom-success-btn" id="btn-add-const-note" name="" data-formtarget="#formAddConstituentNote">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- right side modal 12 -->
+<div class="modal modal-right fade" id="user1modal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Opportunities</h5>
+                <button type="button" class="btn-normal modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="right-modal-form">
+
+                    <form id="formIdOpportunities">
+                        <div class="row">
+                            <!-- <p>Primary Name Formats</p> -->
+                            <div class="col-md-3 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Purpose <span style="color: red;">*</span></label>
+                                <select class="form-control" name="OPPORTUNITIES_PURPOSE" required>
+                                    <option value="0">Select</option>
+                                    <option value="Alumuni">Alumuni</option>
+                                    <option value="Faculty">Faculty</option>
+                                    <option value="Corporate">Corporate</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Name <span style="color: red;">*</span></label>
+                                <input type="text" id="" class="form-control" placeholder="enter" name="OPPORTUNITIES_name" required>
+                            </div>
+
+                            <div class="col-md-3 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Status</label>
+                                <select class="form-control" name="OPPORTUNITIES_STATUS">
+                                    <option value="0">Select</option>
+                                    <option value="Pipeline">Pipeline</option>
+                                    <option value="Solicitation">Solicitation</option>
+                                    <option value="others">others</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Date</label>
+                                <input type="date" id="" class="form-control" name="OPPORTUNITIES_DATE">
+                            </div>
+
+                            <div class="col-md-4 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Ask Date</label>
+                                <input type="date" id="" class="form-control" name="OPPORTUNITIES_ASK_DATE" placeholder="Enter">
+                            </div>
+
+                            <div class="col-md-4 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Expected Date</label>
+                                <input type="date" id="" class="form-control" name="OPPORTUNITIES_EXPECTED_DATE">
+                            </div>
+
+                            <div class="col-md-4 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Funded Date</label>
+                                <input type="date" id="" class="form-control" name="OPPORTUNITIES_FUNDED_DATE">
+                            </div>
+
+                            <div class="col-md-4 col-10 right-div-cntrl">
+                                <label for="" class="frm-label">Ask Ammount</label>
+                                <input type="text" id="" class="form-control" placeholder="Enter" name="OPPORTUNITIES_ASK_AMOUNT">
+                            </div>
+
+                            <div class="col-md-4 col-10 right-div-cntrl">
+                                <label for="" class="frm-label">Expected Ammount</label>
+                                <input type="text" id="" class="form-control" placeholder="Enter" name="OPPORTUNITIES_EXPECTED_AMOUNT">
+                            </div>
+
+                            <div class="col-md-4 col-10 right-div-cntrl">
+                                <label for="" class="frm-label">Funded Ammount</label>
+                                <input type="text" id="" class="form-control" placeholder="Enter" name="OPPORTUNITIES_FUNDED_AMOUNT">
+                            </div>
+                            <div class="col-md-8 col-12 right-div-cntrl">
+
+                                <label for="" class="frm-label">Fund Raiser <span style="color: red;">*</span></label>
+                                <div class="custom-scrch-bx">
+                                    <input type="text" class="form-control search-input" placeholder="Enter" name="OPPORTUNITIES_FUND_RAISER" required />
+                                    <span class="custom-search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Campaign </label>
+                                <input type="text" id="" class="form-control" placeholder="Search For a Campaign" name="OPPORTUNITIES_CAMPAIGN">
+                            </div>
+
+                            <div class="col-md-5 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Fund</label>
+                                <input type="text" id="" class="form-control" placeholder="Search For a Fund" name="OPPORTUNITIES_FUND">
+                            </div>
+
+                            <div class="col-md-5 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Gift Type</label>
+                                <select class="form-control" name="OPPORTUNITIES_GIFT_TYPE">
+                                    <option value="0">Select</option>
+                                    <option value="Cash">Cash</option>
+                                    <option value="Online">Online</option>
+                                    <option value="others">others</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-5 col-6 right-div-cntrl">
+                                <label for="" class="frm-label">Likelihood</label>
+                                <select class="form-control" name="OPPORTUNITIES_LIKELIHOOD">
+                                    <option value="0">Select</option>
+                                    <option value="Likely">Likely</option>
+                                    <option value="Very_Likely">Very Likely</option>
+                                    <option value="others">others</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <div class="row">
+                        <div class="col-md-1 col-4">
+                            <button type="button" class="right-submit-btn custom-btn custom-success-btn" id="_BtnSaveOpportunities" name="" data-formtarget="#formIdOpportunities">Submit</button>
+                        </div>
+                        <div class="col-md-1 col-4">
+                            <button type="submit" class="right-submit-btn custom-btn custom-danger-btn" id="" name="">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-right fade" id="user1modal16-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Assigned Fundraisers</h5>
+                <button type="button" class="btn-normal modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="right-modal-form">
+                    <form id="FormIDAssigned_Fundraisers">
+                        <div class="row">
+                            <div class="col-md-8 col-12 right-div-cntrl">
+
+                                <label for="" class="frm-label">Fundraiser <span style="color: red;">*</span></label>
+                                <input type="text" id="" class="form-control-2" placeholder="Search For Fundraiser" style="position: relative; padding-right: 20px;" name="FUNDRAISERS" required><span class="search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-4 col-10 right-div-cntrl">
+                                <label for="" class="frm-label">Fundraiser Type <span style="color: red;">*</span></label>
+                                <select class="form-control-2" name="FUNDRAISERS_TYPE" required>
+                                    <option value="0">Select</option>
+                                    <option value="Staff">Staff</option>
+                                    <option value="Option2">Option2</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4 col-5 right-div-cntrl">
+                                <label for="" class="frm-label">Assignment Starts</label>
+                                <input type="date" id="" class="form-control-2" name="FUNDRAISERS_ASSIGNMENT_START_DATE">
+                            </div>
+
+                            <div class="col-md-4 col-5 right-div-cntrl">
+                                <label for="" class="frm-label">Assignment Ends</label>
+                                <input type="date" id="" class="form-control-2" name="FUNDRAISERS_ASSIGNMENT_END_DATE">
+                            </div>
+
+                            <div class="col-md-10 col-12 right-div-cntrl">
+                                <label for="" class="frm-label">Reason for Assignment</label>
+                                <textarea class="form-control-2 custom-textarea" name="FUNDRAISERS_ASSIGNMENT_REASON"></textarea>
+                            </div>
+
+                            <p>Fundraising</p>
+                            <div class="col-md-3 col-4 right-div-cntrl">
+                                <label for="" class="frm-label">Amount</label>
+                                <input type="text" id="" class="form-control-2" placeholder="Enter Good Ammount" name="FUNDRAISERS_AMOUNT">
+                            </div>
+
+                            <div class="col-md-3 col-4 right-div-cntrl">
+                                <label for="" class="frm-label">Campaign</label>
+                                <input type="text" id="" class="form-control-2" placeholder="Search For a campaign" name="FUNDRAISERS_CAMPAIGN">
+                            </div>
+
+                            <div class="col-md-3 col-4 right-div-cntrl">
+                                <label for="" class="frm-label">Fund</label>
+                                <input type="text" id="" class="form-control-2" placeholder="Search For a Fund" name="FUNDRAISERS_FUND">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-md-1 col-4">
+                            <button type="button" class="right-submit-btn custom-btn custom-success-btn" id="_BtnSaveFundraisersDetails" name="" data-formtarget="#FormIDAssigned_Fundraisers">Submit</button>
+                        </div>
+                        <div class="col-md-1 col-4">
+                            <button type="submit" class="right-submit-btn custom-btn custom-danger-btn" id="" name="">Cancel</button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--Modal section End-->
+
+
+
+<script src="~/Assets/Scripts/Constituent-View-Details.js"></script>

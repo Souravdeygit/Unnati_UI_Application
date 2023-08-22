@@ -1,0 +1,135 @@
+.modal {
+    .modal-header {
+        background-color: #c9e4ef;
+        border-bottom: none;
+        justify-content: initial;
+
+        h3 {
+            font-size: 22px;
+        }
+        .modal-title {
+            color: #6e6b7b;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+
+    .modal-body {
+        .light-txt{
+            color:#6e6b7b !important;
+            font-size: 12px !important;
+        }
+        .cmt-wrap {
+            h6 {
+                color: #6e6b7b;
+                font-weight: 600;
+                font-size: 16px;
+                padding-bottom: 10px; 
+            }
+
+            p {
+                color: #6e6b7b;
+                font-weight: 400;
+                font-size: 15px; 
+                line-height: 22px;
+            }
+        }
+    }
+}
+.popup-modal{
+    .modal-content{
+        border-radius: 20px !important;
+    }
+    .modal-content::after{
+        content: '';
+        position: absolute;
+        // top: -9px;
+        // left: -12px;
+        // height: 104%;
+        // width: 102%;
+
+        top:calc(-1 * 10px);
+        left:calc(-1 * 10px);
+        height: calc(100% + 10px * 2);
+        width: calc(100% + 10px * 2);
+        // #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        background: linear-gradient(60deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+        border-radius: 20px;
+        z-index: -1;
+        animation: moving-border 3s ease alternate infinite;
+        background-size: 300% 300%;
+    }
+    @keyframes  moving-border{
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+    .modal-body{
+        border: 1px solid #fff;
+        border-radius: 20px;
+        .create-cont{
+            padding: 20px;
+             margin-top: 30px;
+            h5{
+                text-align: center;
+                text-transform: uppercase;
+                color: #6e6b7b;
+                font-weight: 600;
+                margin-bottom: 40px;
+            }
+            .btn-conainer{
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+//  right side modal css 
+.right-modal-form{
+    .menu{
+        display: none;
+    }
+    .menu.active{
+        display: block;
+    }
+    .softshow{
+        display: none;
+    }
+    .softshow.active{
+        display: block !important;
+    }
+    .align-margin-chck{
+        margin-top: 40px;
+    }
+
+
+ p{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px 0 5px 0;
+}
+.right-div-cntrl{
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.right-submit-btn{
+    margin: 20px 0 0 0;
+}
+
+
+.frm-label-checkbx{
+    font-size: 15px;
+    // display: block;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #6e6b7b;
+    margin-left: 5px;
+}
+}

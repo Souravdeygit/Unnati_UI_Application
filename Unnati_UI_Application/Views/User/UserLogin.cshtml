@@ -1,0 +1,141 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-2.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!--Feather js link-->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <!-- own carousel  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .shadow-main {
+            box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+        }
+
+        .darkmodeactivated .shadow-main {
+            box-shadow: 0 4px 24px 0 rgb(118 143 165 / 10%);
+        }
+
+        li .active {
+            box-shadow: 0 0 6px 1px rgb(1 175 174 / 60%);
+        }
+    </style>
+
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Unnati</title>
+</head>
+
+<body>
+    <div class="login-pg-wrapper">
+        <div class="login-form-wrap">
+            <div class="logo-container text-center big-screen-logo light-mood-logo">
+                <img src="./images/blue-unnati-ico n.png" alt="Unnati logo">
+            </div>
+            <p class="text-center mt-3">Please sign-in to your account</p>
+            <form>
+                <div class="form-label">
+                    <label class="frm-label">Email</label>
+                    <input type="email" id="email" class="form-control" />
+                </div>
+                <div class="form-label">
+                    <label class="frm-label">Password</label>
+                    <input type="password" id="password" class="form-control" />
+                </div>
+                <div class="form-label">
+                    <input type="checkbox" class="m-0" />&nbsp;&nbsp;&nbsp;Remember Me
+                </div>
+                <div class="form-label">
+                    <a class="login-btn" id="_btnLoginUser">Log In</a>
+                    @*<a class="login-btn" href="@Url.Action("Dashboard","Dashboard")">Log In</a>*@
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="~/Assets/Scripts/Action-List.js"></script>
+    <script>
+        $(document).ready(function () {
+            var _baseUrl = window.origin;
+            var _loader = $(".loader");
+            $(document).on("click", "#_btnLoginUser", function () {
+                $.ajax({
+                    type: "GET",
+                    url: _baseUrl + "/user/login?username=" + $("#email").val() + "&password=" + $("#password").val(),
+                    dataType: "json",
+                    beforeSend: function () { _loader.fadeIn(); },
+                    success: function (data) {
+                        if (data.status) {
+                            window.location.replace(_baseUrl + "/Dashboard/Dashboard");
+                            Swal.fire({
+                                title: 'Success!',
+                                icon: 'success',
+                                text: result.response,
+                                showConfirmButton: true,
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+
+                                }
+                            });
+
+                        }
+                        else {
+                            Swal.fire({
+                                icon: 'info',
+                                title: 'Info!',
+                                showConfirmButton: true,
+                                text: "'Enter a valid userId and password"
+                            })
+                          //  alert('Enter a valid userId and password');
+
+                        }
+
+
+                    },
+                    error: function (err) {
+                        alert('Something went wrong!');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong!',
+                            showConfirmButton: true
+
+                        })
+
+                    },
+                    complete: function () { _loader.fadeOut(); },
+
+
+                })
+
+            });
+        });
+
+    </script>
+</body>
+</html>

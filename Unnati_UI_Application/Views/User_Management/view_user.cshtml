@@ -1,0 +1,225 @@
+﻿
+@{
+    ViewBag.Title = "view_user";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<section class="layout-body">
+    <div class="container-fluid">
+
+        <div class="card-wrap all-wrap shadow-main">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="frm-label">First Name</label>
+                        <input type="text" class="form-control" required="" id="FirstName_Id">
+                    </div>
+                    @*<div class="col-md-2">
+                        <label class="frm-label">User Account Status</label>
+                        <select class="form-control" data-val="true" data-val-required="Select User status name is required" id="ddl_user_status" name="USER_STATUS">
+                            <option value="0">Select</option>
+                            <option value="2">Approved</option>
+                            <option value="3">Rejected</option>
+                            <option value="4">Blocked</option>
+                            <option value="5">Deleted</option>
+                            <option value="6">Locked</option>
+                        </select>
+                    </div>*@
+                    <div class="col-md-2">
+                        <label class="frm-label">Email</label>
+                        <input type="email" class="form-control" name="name" required="" maxlength="30" id="Email_Id">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="frm-label">Mobile Number</label>
+                        <input type="tel" class="form-control" name="name" required="" maxlength="30" id="Mobile_Id">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="frm-label">Role</label>
+                        <select class="form-control" id="ddl_system_role_id">
+                            @*<option value="0">Select</option>
+                            <option value="1">Telecaller</option>
+                            <option value="2">Admin</option>
+                            <option value="3">HOD</option>
+                            <option value="4">Escalation manager</option>*@
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        @*<a class="custom-btn custom-success-btn" style="margin-top: 30px;">Search</a>*@
+                        <button type="button" class="custom-btn custom-success-btn" id="Search_Id" name="" style="margin-top: 30px;">Search</button>
+                    </div>
+                </div>
+                <div class="table-responsive text-center mt-3 light-table" id="demo">
+                    @*<table id="viewuserbind_Table">*@
+                    @*<thead>
+                            <tr>
+
+                                <th>PERSON NAME</th>
+                                <th>ORGANISATION NAME</th>
+                                <th>EMAIL ID</th>
+                                <th>STATUS</th>
+                                <th>ROLE</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="1">
+                                <td>Uttam kumar Das</td>
+                                <td>Tangent Tech Solutions</td>
+                                <td>interviewer@yopmail.com</td>
+                                <td>Approved</td>
+                                <td>Admin</td>
+                                <td class="d-flex" style="justify-content: center;">
+                                    <button type="button" class="action-btn cls_1" id="" name=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button type="button" class="action-btn cls_1" id="" name=""><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="2">
+                                <td>Uttam Das</td>
+                                <td>Tangent Tech Solutions</td>
+                                <td>contentmanager@yopmail.com</td>
+                                <td>Approved</td>
+                                <td>HOD</td>
+                                <td class="d-flex" style="justify-content: center;">
+                                    <button type="button" class="action-btn cls_2" id="" name=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button type="button" class="action-btn cls_2" id="" name=""><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>Sanjay Kushwaha</td>
+                                <td>Tangent Tech Solutions</td>
+                                <td>sanjaytts@yopmail.com</td>
+                                <td>Approved</td>
+                                <td>Escalation manager</td>
+                                <td class="d-flex" style="justify-content: center;">
+                                    <button type="button" class="action-btn" id="" name=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button type="button" class="action-btn" id="" name=""><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>Tangent NA Support</td>
+                                <td>Tangent Tech Solutions</td>
+                                <td>support@tangenttechsolutions.com</td>
+                                <td>Approved</td>
+                                <td>Telecaller</td>
+                                <td class="d-flex" style="justify-content: center;">
+                                    <button type="button" class="action-btn" id="" name=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button type="button" class="action-btn" id="" name=""><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>Ranjan Singh Rout</td>
+                                <td>Tangent Tech Solutions</td>
+                                <td>ranjantts@yopmail.com</td>
+                                <td>Approved</td>
+                                <td>Telecaller</td>
+                                <td class="d-flex" style="justify-content: center;">
+                                    <button type="button" class="action-btn" id="" name=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button type="button" class="action-btn" id="" name=""><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>*@
+                    @*</table>*@
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal -->
+
+<div class="modal modal-right fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-xl">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-normal modal-close" data-bs-dismiss="modal" aria-label="Close" id="HeaderClose_Id">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="card-wrap all-wrap shadow-main">
+                        <div class="">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="frm-label">User Type <span style="color: red;">*</span></label>
+                                    <select class="form-control" id="ddl_user_type">
+                                    </select>
+                                    <span style="color: red;" id="ddl_user_type_error"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="frm-label">Organization Name <span style="color: red;">*</span></label>
+                                    <select class="form-control" id="ddl_organization">
+                                    </select>
+                                    <span style="color: red;" id="ddl_organization_error"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="frm-label">Title <span style="color: red;">*</span></label>
+                                    <select class="form-control" id="ddl_title">
+                                    </select>
+                                    <span style="color: red;" id="ddl_title_error"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="frm-label">System Role <span style="color: red;">*</span></label>
+                                    <select class="form-control" id="ddl_system_role">
+                                    </select>
+                                    <span style="color: red;" id="ddl_system_role_error"></span>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-3">
+                                    <label class="frm-label">System Module<span style="color: red;">*</span></label>
+                                    <select name="languageSelect[]" multiple id="ModuleId">
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label class="frm-label">First Name <span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter First Name" id="txt_first_name" />
+                                    <span style="color: red;" id="txt_first_name_error"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="frm-label">Last Name <span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter Last Name" id="txt_last_name" />
+                                    <span style="color: red;" id="txt_last_name_error"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="frm-label">Gender <span style="color: red;">*</span></label>
+                                    <select class="form-control" id="ddl_gender">
+                                    </select>
+                                    <span style="color: red;" id="ddl_gender_error"></span>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-3">
+                                    <label class="frm-label">Phone Number <span style="color: red;">*</span></label>
+                                    <input type="tel" class="form-control" name="name" required="" maxlength="30" placeholder="Enter Phone No." id="txt_phone_no" />
+                                    <span style="color: red;" id="txt_phone_no_error"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="frm-label">Email ID <span style="color: red;">*</span></label>
+                                    <input type="email" class="form-control" name="name" required="" maxlength="30" placeholder="Enter Email" id="txt_email" />
+                                    <span style="color: red;" id="txt_email_error"></span>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12 mt-3">
+                                    <button type="button" class="custom-btn custom-success-btn abc" id="submit_user_data">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>*@
+        </div>
+
+    </div>
+</div>
+

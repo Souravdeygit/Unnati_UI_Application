@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewBag.Title = "Add User";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+
+
+<section class="layout-body">
+    <div class="container-fluid">
+        <div class="card-wrap all-wrap shadow-main">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label class="frm-label">User Type <span style="color: red;">*</span></label>
+                        <select class="form-control" id="ddl_user_type">
+                            @*<option value="0">Select User Type</option>*@
+                            @*<option value="1">Internal User</option>
+                            <option value="2">External User</option>*@
+                        </select>
+                        <span style="color: red;" id="ddl_user_type_error"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="frm-label">Organization Name <span style="color: red;">*</span></label>
+                        <select class="form-control" id="ddl_organization">
+                            @*<option>Select Organization</option>*@
+                            @*<option value="1">O1</option>
+                            <option value="2">O2</option>*@
+                        </select>
+                        <span style="color: red;" id="ddl_organization_error"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="frm-label">Title <span style="color: red;">*</span></label>
+                        <select class="form-control" id="ddl_title">
+                            @*<option>Select</option>*@
+                            @*<option value="1">Mr.</option>
+                            <option value="2">Mrs.</option>
+                            <option value="3">Dr.</option>
+                            <option value="4">Prof.</option>
+                            <option value="5">Miss</option>*@
+                        </select>
+                        <span style="color: red;" id="ddl_title_error"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="frm-label">System Role <span style="color: red;">*</span></label>
+                        <select class="form-control" id="ddl_system_role">
+                            @*<option>Select Role</option>*@
+                            @*<option value="1">R1</option>
+                            <option value="2">R2</option>*@
+                        </select>
+                        <span style="color: red;" id="ddl_system_role_error"></span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <label class="frm-label">System Module<span style="color: red;">*</span></label>
+                        <select name="languageSelect[]" multiple id="ModuleId">
+                            @*<option value="1">FundRaising</option>
+                            <option value="2">Marketing</option>
+                            <option value="3">List</option>
+                            <option value="4">Control Panel</option>
+                            <option value="5">User Management</option>
+                            <option value="6">Admin Area</option>*@
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="frm-label">First Name <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" placeholder="Enter First Name" id="txt_first_name" />
+                        <span style="color: red;" id="txt_first_name_error"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="frm-label">Last Name <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" placeholder="Enter Last Name" id="txt_last_name" />
+                        <span style="color: red;" id="txt_last_name_error"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="frm-label">Gender <span style="color: red;">*</span></label>
+                        <select class="form-control" id="ddl_gender">
+                            @*<option>Select Gender</option>*@
+                            @*<option value="M">Male</option>
+                            <option value="F">Female</option>*@
+                        </select>
+                        <span style="color: red;" id="ddl_gender_error"></span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <label class="frm-label">Phone Number <span style="color: red;">*</span></label>
+                        <input type="tel" class="form-control" name="name" required="" maxlength="30" placeholder="Enter Phone No." id="txt_phone_no" />
+                        <span style="color: red;" id="txt_phone_no_error"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="frm-label">Email ID <span style="color: red;">*</span></label>
+                        <input type="email" class="form-control" name="name" required="" maxlength="30" placeholder="Enter Email" id="txt_email" />
+                        <span style="color: red;" id="txt_email_error"></span>
+                    </div>
+                    <!-- <div class="col-md-3">
+                        <label class="frm-label">Centre</label>
+                        <select name="centre" id="form-field-1" class="form-control" required="">
+                            <option value="">Select</option>
+                            <option value="siliguri">Siliguri</option>
+                            <option value="kolkata">Kolkata</option>
+                        </select>
+                    </div> -->
+                </div>
+                <div class="row mt-3">
+                    <!-- <div class="col-md-3">
+                        <label class="frm-label">User Password</label>
+                        <input type="password" name="password" value="" id="form-field-1" class="form-control gen_pass" required="" />
+                    </div> -->
+                    <!-- <div class="col-md-3">
+                        <a class="custom-btn custom-dark-btn" href="#" style="margin-top: 30px;">Generate Password</a>
+                    </div> -->
+                    <div class="col-md-12 mt-3">
+                        @*<a class="custom-btn custom-success-btn" href="#"></a>*@
+                        <button type="button" class="custom-btn custom-success-btn abc" id="submit_user_data">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--<script>
+        $(document).ready(function () {
+            $("select")
+                .change(function () {
+                    $(this)
+                        .find("option:selected")
+                        .each(function () {
+                            var optionValue = $(this).attr("value");
+                            if (optionValue) {
+                                $(".box")
+                                    .not("." + optionValue)
+                                    .hide();
+                                $("." + optionValue).show();
+                            } else {
+                                $(".box").hide();
+                            }
+                        });
+                })
+                .change();
+        });
+</script>
+
+<script>
+        feather.replace();
+</script>-->
+<!--Toggle js-->
+<!--<script src="../js/toggle.js"></script>
+<script src="../js/mobile_toggle.js"></script>-->
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->

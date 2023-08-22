@@ -1,0 +1,537 @@
+﻿
+@{
+ViewBag.Title = "Dashboard";
+Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+    <div class="main-body-wrapper">
+       
+        <section class="layout-body">
+            <div class="container-fluid">
+                <div class="row mt-3">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <a href="~/list/Constituent.html">
+                                    <div class="card-wrap shadow-main card-wrap-clr-one">
+                                        <div class="card-wrap-body">
+                                            <div class="stat-list-wrap">
+                                                <ul class="stat-list">
+                                                    <li><img src="~/images/All-Constituents.png" class="img-fluid dashboard-icns"></li>
+                                                    <li>All Constituent</li>
+                                                    <li>7890 </li>
+                                                    <!-- <li>7654 <i class="fa fa-inr" aria-hidden="true"></i> <span>(76)</span></li> -->
+                                                    <!-- <li>10</li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 sm-res-space">
+                                <a href="~/list/Constituent.html">
+                                    <div class="card-wrap shadow-main card-wrap-clr-two">
+                                        <div class="card-wrap-body">
+                                            <div class="stat-list-wrap">
+                                                <ul class="stat-list">
+                                                    <li><img src="~/images/mind.png" class="img-fluid dashboard-icns"></li>
+                                                    <li>Prospect</li>
+                                                    <li>7890 <i class="fa fa-inr" aria-hidden="true"></i> <span>(15)</span></li>
+                                                    <!-- <li>7654 <i class="fa fa-inr" aria-hidden="true"></i> <span>(76)</span></li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 mt-4">
+                                <a href="~/list/Constituent.html">
+                                    <div class="card-wrap shadow-main card-wrap-clr-three">
+                                        <div class="card-wrap-body">
+                                            <div class="stat-list-wrap">
+                                                <ul class="stat-list">
+                                                    <li><img src="~/images/Cultivation.png" class="img-fluid dashboard-icns"></li>
+                                                    <li>Cultivation</li>
+                                                    <li>7890 <i class="fa fa-inr" aria-hidden="true"></i> <span>(15)</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 mt-4">
+                                <a href="~/list/Constituent.html">
+                                    <div class="card-wrap shadow-main card-wrap-clr-four">
+                                        <div class="card-wrap-body">
+                                            <div class="stat-list-wrap">
+                                                <ul class="stat-list">
+                                                    <li><img src="~/images/Solicitated.png" class="img-fluid dashboard-icns"></li>
+                                                    <li>Soliciated</li>
+                                                    <li>7777 <i class="fa fa-inr" aria-hidden="true"></i> <span>(17)</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-4">
+                                <a href="~/Constituent.html">
+                                    <div class="card-wrap shadow-main card-wrap-clr-five">
+                                        <div class="card-wrap-body">
+                                            <div class="stat-list-wrap">
+                                                <ul class="stat-list">
+                                                    <li><img src="~/images/Committed.png" class="img-fluid dashboard-icns"></li>
+                                                    <li>Committed</li>
+                                                    <li>7654 <i class="fa fa-inr" aria-hidden="true"></i> <span>(76)</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-4">
+                                <a href="~/Constituent.html">
+                                    <div class="card-wrap shadow-main card-wrap-clr-six">
+                                        <div class="card-wrap-body">
+                                            <div class="stat-list-wrap">
+                                                <ul class="stat-list">
+                                                    <li><img src="~/images/Fund-Raised.png" class="img-fluid dashboard-icns"></li>
+                                                    <li>Raised</li>
+                                                    <li>7654 <i class="fa fa-inr" aria-hidden="true"></i> <span>(76)</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-7 lg-res-space animate__animated animate__zoomIn">
+
+                        <div class="clr-card-wrap card-wrap shadow-main">
+                            <div class="card-wrap-head">
+                                <h5>Fund Raised</h5>
+                            </div>
+                            <div class="card-wrap-body pt-0">
+                                <div>
+                                    <div id="barchart_values" style="width: 100%; height: 330px;"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    @*<nav id="m-menus">
+        <ul>
+            <li><a href="~/dashboard.html" class="active">Dashboard</a></li>
+            <li>
+                <a href="#">Fundraising</a>
+                <ul>
+                    <li><a href="~/fundraising/add-mou.html">Work</a></li>
+                    <li><a href="~/fundraising/gift-management.html">Gift Management</a></li>
+                    <li><a href="~/fundraising/reporting.html">Reporting</a></li>
+                    <li><a href="~/fundraising/add-constituent.html">Add Constituent</a></li>
+                    <li><a href="~/fundraising/donation-summary.html">Donation Summary</a></li>
+                    <li><a href="~/fundraising/add-mou.html">Add MOU</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Marketing</a>
+                <ul>
+                    <li><a href="~/marketing/social.html">Social</a></li>
+                    <li>
+                        <a href="#">Email</a>
+                        <ul>
+                            <li><a href="~/marketing/compose-email.html">Compose Email</a></li>
+                            <li><a href="~/marketing/sent-email.html">Sent Email</a></li>
+                            <li><a href="~/marketing/email-groups">Email Groups</a></li>
+                            <li><a href="~/marketing/email-templates.html">Email Templates</a></li>
+                            <li><a href="~/marketing/unsubscribe-users.html">Unsubscribed Users</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Events</a>
+                        <ul>
+                            <li><a href="~/marketing/view-events.html">View All Events</a></li>
+                            <li><a href="~/marketing/create-events.html">Create Event</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">List</a>
+                <ul>
+                    <li><a href="~/list/action.html">Action</a></li>
+                    <li><a href="~/list/Constituent.html">Constituent</a></li>
+                    <li><a href="~/list/gift.html">Gift</a></li>
+                    <li><a href="~/list/opportunities.html">Opportunity</a></li>
+                    <li><a href="~/list/MOU.html">MOU</a></li>
+                    <li><a href="~/list/projects.html">Projects</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">User Management</a>
+                <ul>
+                    <li><a href="~/user-management/assign-role.html">Add Role</a></li>
+                    <li><a href="~/user-management/master-data.html">Master Data</a></li>
+                    <li><a href="~/add-user.html">Add User</a></li>
+                    <li><a href="~/view-user.html">view User</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Web sites</a>
+                <ul>
+                    <li><a href="~/website/news.html">News</a></li>
+                    <li><a href="~/website/events.html">Events</a></li>
+                    <li><a href="~/website/media.html">Media</a></li>
+                    <li><a href="~/website/award.html">Awards</a></li>
+                    <li><a href="~/website/sponsored-project.html">Sponsered Projects</a></li>
+                    <li><a href="~/website/newsletter.html">Newsletter</a></li>
+                    <li><a href="~/website/our-team.html">Our Teama</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>*@
+    <div class="modal modal-right fade" id="right_modal_xl" tabindex="-1" role="dialog"
+         aria-labelledby="right_modal_xl">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i data-feather="chevron-right"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive light-table text-center mt-2">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Description</th>
+                                    <th>Pending Approval Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#tablecollapse"
+                                              aria-expanded="false" aria-controls="tablecollapse"></span>
+                                    </td>
+                                    <td>
+                                        Muti Party Payments Approval
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="border: none;" class="p-0">
+                                        <div class="collapse" id="tablecollapse">
+                                            <div class="px-3 py-3">
+                                                <table id="secondtable" class="">
+                                                    <thead class="csr_table_worklist">
+                                                        <tr>
+                                                            <th>Amount Configured</th>
+                                                            <th>No. Of Installment</th>
+                                                            <th>Grantee Name</th>
+                                                            <th>Remarks</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr data-pmid="138" data-paymentconfig="1"
+                                                            data-paymentinstallment="2"
+                                                            data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                            <td id="paymentamount" class="paymentamount">45678</td>
+                                                            <td id="installmentno" class="installmentno">2</td>
+                                                            <td id="paymenttitle" class="paymenttitle">Google</td>
+                                                            <td id="paymentremarks" class="paymentremarks"></td>
+                                                            <td>
+                                                                <div class="form-group comment-form">
+                                                                    <div class="text-left">
+                                                                        <h6>Comment:</h6><textarea id="comment_reciept_approve_final"
+                                                                                                   class="form-control my-3"></textarea><button id="approve_payment_config_btn"
+                                                                                                                                                class="btn btn-success aprv-btn">
+                                                                            <i class="fa fa-check"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>&nbsp;&nbsp;<button id="reject_payment_config_btn"
+                                                                                                     class="btn btn-danger">
+                                                                            <i class="fa fa-ban"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-pmid="138" data-paymentconfig="1"
+                                                            data-paymentinstallment="4"
+                                                            data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                            <td id="paymentamount" class="paymentamount">67769</td>
+                                                            <td id="installmentno" class="installmentno">4</td>
+                                                            <td id="paymenttitle" class="paymenttitle">Tax</td>
+                                                            <td id="paymentremarks" class="paymentremarks"></td>
+                                                            <td>
+                                                                <div class="form-group comment-form">
+                                                                    <div class="text-left">
+                                                                        <h6>Comment:</h6><textarea id="comment_reciept_approve_final"
+                                                                                                   class="form-control my-3"></textarea><button id="approve_payment_config_btn"
+                                                                                                                                                class="btn btn-success aprv-btn">
+                                                                            <i class="fa fa-check"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>&nbsp;&nbsp;<button id="reject_payment_config_btn"
+                                                                                                     class="btn btn-danger">
+                                                                            <i class="fa fa-ban"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-pmid="138" data-paymentconfig="1"
+                                                            data-paymentinstallment="2"
+                                                            data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                            <td id="paymentamount" class="paymentamount">46456</td>
+                                                            <td id="installmentno" class="installmentno">2</td>
+                                                            <td id="paymenttitle" class="paymenttitle">test</td>
+                                                            <td id="paymentremarks" class="paymentremarks"></td>
+                                                            <td>
+                                                                <div class="form-group comment-form">
+                                                                    <div class="text-left">
+                                                                        <h6>Comment:</h6><textarea id="comment_reciept_approve_final"
+                                                                                                   class="form-control my-3"></textarea><button id="approve_payment_config_btn"
+                                                                                                                                                class="btn btn-success aprv-btn">
+                                                                            <i class="fa fa-check"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>&nbsp;&nbsp;<button id="reject_payment_config_btn"
+                                                                                                     class="btn btn-danger">
+                                                                            <i class="fa fa-ban"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-pmid="145" data-paymentconfig="1"
+                                                            data-paymentinstallment="3"
+                                                            data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                            <td id="paymentamount" class="paymentamount">25000</td>
+                                                            <td id="installmentno" class="installmentno">3</td>
+                                                            <td id="paymenttitle" class="paymenttitle">Breaking Bad</td>
+                                                            <td id="paymentremarks" class="paymentremarks"></td>
+                                                            <td>
+                                                                <div class="form-group comment-form">
+                                                                    <div class="text-left">
+                                                                        <h6>Comment:</h6><textarea id="comment_reciept_approve_final"
+                                                                                                   class="form-control my-3"></textarea><button id="approve_payment_config_btn"
+                                                                                                                                                class="btn btn-success aprv-btn">
+                                                                            <i class="fa fa-check"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>&nbsp;&nbsp;<button id="reject_payment_config_btn"
+                                                                                                     class="btn btn-danger">
+                                                                            <i class="fa fa-ban"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-pmid="145" data-paymentconfig="1"
+                                                            data-paymentinstallment="3"
+                                                            data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                            <td id="paymentamount" class="paymentamount">1500000</td>
+                                                            <td id="installmentno" class="installmentno">3</td>
+                                                            <td id="paymenttitle" class="paymenttitle">Google</td>
+                                                            <td id="paymentremarks" class="paymentremarks"></td>
+                                                            <td>
+                                                                <div class="form-group comment-form">
+                                                                    <div class="text-left">
+                                                                        <h6>Comment:</h6><textarea id="comment_reciept_approve_final"
+                                                                                                   class="form-control my-3"></textarea><button id="approve_payment_config_btn"
+                                                                                                                                                class="btn btn-success aprv-btn">
+                                                                            <i class="fa fa-check"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>&nbsp;&nbsp;<button id="reject_payment_config_btn"
+                                                                                                     class="btn btn-danger">
+                                                                            <i class="fa fa-ban"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-pmid="145" data-paymentconfig="1"
+                                                            data-paymentinstallment="3"
+                                                            data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                            <td id="paymentamount" class="paymentamount">25000</td>
+                                                            <td id="installmentno" class="installmentno">3</td>
+                                                            <td id="paymenttitle" class="paymenttitle">Breaking Bad</td>
+                                                            <td id="paymentremarks" class="paymentremarks"></td>
+                                                            <td>
+                                                                <div class="form-group comment-form">
+                                                                    <div class="text-left">
+                                                                        <h6>Comment:</h6><textarea id="comment_reciept_approve_final"
+                                                                                                   class="form-control my-3"></textarea><button id="approve_payment_config_btn"
+                                                                                                                                                class="btn btn-success aprv-btn">
+                                                                            <i class="fa fa-check"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>&nbsp;&nbsp;<button id="reject_payment_config_btn"
+                                                                                                     class="btn btn-danger">
+                                                                            <i class="fa fa-ban"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-pmid="145" data-paymentconfig="1"
+                                                            data-paymentinstallment="3"
+                                                            data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                            <td id="paymentamount" class="paymentamount">1500000</td>
+                                                            <td id="installmentno" class="installmentno">3</td>
+                                                            <td id="paymenttitle" class="paymenttitle">Google</td>
+                                                            <td id="paymentremarks" class="paymentremarks"></td>
+                                                            <td>
+                                                                <div class="form-group comment-form">
+                                                                    <div class="text-left">
+                                                                        <h6>Comment:</h6><textarea id="comment_reciept_approve_final"
+                                                                                                   class="form-control my-3"></textarea><button id="approve_payment_config_btn"
+                                                                                                                                                class="btn btn-success aprv-btn">
+                                                                            <i class="fa fa-check"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>&nbsp;&nbsp;<button id="reject_payment_config_btn"
+                                                                                                     class="btn btn-danger">
+                                                                            <i class="fa fa-ban"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-pmid="148" data-paymentconfig="1"
+                                                            data-paymentinstallment="1"
+                                                            data-actionnamenew="MULTI_PARTY_PAYMENT">
+                                                            <td id="paymentamount" class="paymentamount">234325</td>
+                                                            <td id="installmentno" class="installmentno">1</td>
+                                                            <td id="paymenttitle" class="paymenttitle">Breaking Bad</td>
+                                                            <td id="paymentremarks" class="paymentremarks"></td>
+                                                            <td>
+                                                                <div class="form-group comment-form">
+                                                                    <div class="text-left">
+                                                                        <h6>Comment:</h6><textarea id="comment_reciept_approve_final"
+                                                                                                   class="form-control my-3"></textarea><button id="approve_payment_config_btn"
+                                                                                                                                                class="btn btn-success aprv-btn">
+                                                                            <i class="fa fa-check"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>&nbsp;&nbsp;<button id="reject_payment_config_btn"
+                                                                                                     class="btn btn-danger">
+                                                                            <i class="fa fa-ban"
+                                                                               aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#tablecollapse2"
+                                              aria-expanded="false" aria-controls="tablecollapse"></span>
+                                    </td>
+                                    <td>
+                                        Bank Guarantee
+                                    </td>
+                                    <td>
+                                        0
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#tablecollapse3"
+                                              aria-expanded="false" aria-controls="tablecollapse"></span>
+                                    </td>
+                                    <td>
+                                        Request Letter
+                                    </td>
+                                    <td>
+                                        0
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <!--Chart js-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- mmenu js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js" integrity="sha512-D1qgHT+xXRgN9gLLLYHbQ/c8wkrADqfXg1kr1dRbP9nOtNzIKKNDU+hmFqR1fSbsU1YFBkw6TbvfZo+SyI0K6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/main.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" }, { role: 'annotation' }  ],
+            ["2000", 2400, "#ff739a", '45' ],
+            ["2010", 5400, "#a057ff", '75'],
+            ["2011", 750, "#3dbfa0", '10'],
+            ["2015", 850, "#efc9bb", '15'],
+            ["2020", 600, "#9c58ff", '6'],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                        {
+                            calc: "stringify",
+                            sourceColumn: 3,
+                            type: "string",
+                            role: "annotation" },
+                        2]);
+
+        var options = {
+            // title: "Density of Precious Metals, in g/cm^3",
+            // width: 755,
+            // height: 300,
+            // border:true,
+            bar: {groupWidth: "85%"},
+            legend: { position: "none" },
+            isStacked: true,
+            hAxis: {
+                minValue: 0,
+                ticks: [0, 1000, 2000, 3000, 4000, 5000, 6000],
+                // maxlines: 7;
+            }
+        };
+
+        var options_stacked = {
+            isStacked: true,
+            height: 300,
+            //   legend: {position: 'bottom', maxLines: 7},
+
+            };
+
+        var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+        chart.draw(view, options);
+    }
+    </script>
+
+    <script>
+        feather.replace()
+    </script>

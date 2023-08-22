@@ -1,0 +1,829 @@
+﻿@{
+    ViewBag.Title = "ActionIndex";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<head>
+    <link href="~/Assets/Css/tab.css" rel="stylesheet" />
+</head>
+<style>
+    .shadow-main {
+        box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+    }
+
+    .darkmodeactivated .shadow-main {
+        box-shadow: 0 4px 24px 0 rgb(118 143 165 / 10%);
+    }
+
+    li .active {
+        box-shadow: 0 0 6px 1px rgb(1 175 174 / 60%);
+    }
+
+    ._hidebox {
+        display: none !important;
+    }
+</style>
+
+<section class="layout-body">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="../dashboard.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="#">List</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Action</li>
+            </ul>
+        </nav>
+        <div class="row show-hide-panel panel-active list-sec-cont">
+            <div class="col-md-12 animate__animated animate__zoomIn">
+                <div class="card-wrap shadow-main">
+                    <div class="card-wrap-body cus-body-wrap">
+                        <div class="all-wrap mt-2 animate__animated animate__zoomIn">
+
+                            <div class="card tab-panel mt-3">
+                                <div class="row">
+                                    <div class="col-md-12 tab-sec">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li>
+                                                <a href="#contact_01" class="active" data-toggle="tab">List 1</a> <span class="custom-danger-btn"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                            </li>
+                                            <!-- <li><a href="#contact_02" data-toggle="tab">Molly Lewis</a>  <span class="custom-danger-btn"> <i class="fa fa-minus-circle" aria-hidden="true"></i> </span>  -->
+
+                                            <li>
+                                                <a href="#" class="add-contact"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="contact_01">
+                                                <div class="list-pannel">
+                                                    <div class="constituent-stts">
+                                                        <p><span>33</span> Records</p>
+                                                    </div>
+                                                    <div class="constituent-contrl-1 form">
+                                                        <div class="ul d-flex">
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-success-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#Save-modal"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn primary-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#column-modal"><i class="fa fa-columns" aria-hidden="true"></i> Columns</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn primary-btn" id="" name=""><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#Share-modall" style="border-radius: 50%;"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <div class="custom-scrch-bx">
+                                                                    <input type="text" class="form-control search-input" placeholder=""><span class="custom-search-icn"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                                </div>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                    <div class="constituent-contrl-mobile form">
+                                                        <div class="row">
+
+                                                            <div class="col-12">
+                                                                <button type="button" class="custom-btn primary-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#column-modal"><i class="fa fa-columns" aria-hidden="true"></i> Coloumns</button>
+                                                            </div>
+                                                            <div class="col-12 mt-3">
+                                                                <button type="button" class="custom-btn primary-btn custom-pri-btn" id="" name=""><i class="fa fa-briefcase" aria-hidden="true"></i> Apply Workflow</button>
+                                                            </div>
+                                                            <div class="col-12 mt-3">
+                                                                <div class="dropdown">
+                                                                    <a class="custom-btn custom-pri-btn primary-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Add/Exclude
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Add To This List</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Exclude From This List</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-5 mt-3">
+                                                                <button type="button" class="custom-btn custom-success-btn custom-pri-btn" id="" name=""><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                                            </div>
+                                                            <div class="col-4 mt-3 p-0">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" style="border-radius: 50%;"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                                            </div>
+                                                            <div class="col-12 mt-3">
+                                                                <input type="text" class="form-control search-input" placeholder=""><span class="search-icn-3"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="constituent-contrl-2 form hide-content">
+                                                        <div class="ul d-flex">
+                                                            <!-- <li class="me-3"><p>Filters:</p></li> -->
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">
+                                                                    <i class="fa fa-filter" aria-hidden="true"></i>
+                                                                </button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-type-modal">Action Type</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-fundraiser-modal">Fundraiser</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-date-modal">Action Date</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-status-modal">Action Status</button>
+                                                            </li>
+                                                            <li class="me-3">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-category-modal">Action Category</button>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                    <div class="constituent-contrl-2 form show-content">
+                                                        <div class="row">
+                                                            <!-- <li class="me-3"><p>Filters:</p></li> -->
+                                                            <div class="col-md-2">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#filter-modal">
+                                                                    <i class="fa fa-filter" aria-hidden="true"></i>
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-type-modal">Action Type</button>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-type-modal">Fundraiser</button>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-type-modal">Action Date</button>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-type-modal">Action Status</button>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <button type="button" class="custom-btn custom-pri-btn" id="" name="" data-bs-toggle="modal" data-bs-target="#action-type-modal">Action Category</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="main_panel">
+                                                        <div class="JCLRgrips" style="width: 1218.97px;"><div class="JCLRgrip JCLRdisabledGrip" style="left: 243.797px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 489.063px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 732.36px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip" style="left: 975.125px; height: 31px;"><div class="JColResizer"></div></div><div class="JCLRgrip JCLRLastGrip" style="left: 1219.47px; height: 31px;"><div class="JColResizer"></div></div></div><table class="table table-bordered main-sec-desktop JCLRFlex JColResizer" id="JColResizer0" style="width: 1218.97px;">
+                                                            <thead class="header-bg">
+                                                                <tr>
+                                                                    <th scope="col" style="width: 242.297px;"><label></label></th>
+                                                                    <th scope="col" style="width: 245.266px;"><label>Constituent Summary</label></th>
+                                                                    <th scope="col" style="width: 243.297px;"><label>Date</label></th>
+                                                                    <th scope="col" style="width: 242.766px;"><label>Status</label></th>
+                                                                    <th scope="col" style="width: 244.344px;"><label>Action Summary</label></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="header-body-bg">
+                                                                <tr>
+                                                                    <!-- <th scope="row">1</th> -->
+                                                                    <td>
+                                                                        <div class="kebab">
+                                                                            <button type="button" class="kebab-btn-round" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#user1modal5">Add Action</button></li>
+                                                                                <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#action-edit">Edit Action</button></li>
+                                                                                <!-- <li><button class="dropdown-iteam" data-bs-toggle="modal" data-bs-target="#">Copy Action</button></li> -->
+                                                                            </ul>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="media-body view-application-body pl-2">
+                                                                            <h5><a href="#" class="highlight-txt" data-bs-toggle="modal" data-bs-target="#user-name-mdl-1">John Matt</a></h5>
+                                                                            <label>Country - <span>United States</span></label><br>
+                                                                            <label>Email Id - <span>matt@jon.com</span></label><br>
+                                                                            <label>Phone No. - <span>085646 83326</span></label>
+                                                                            <!-- <button class="more_btn" data-bs-toggle="collapse"
+                                                                            data-bs-target="#collapseExample" aria-expanded="false"
+                                                                            aria-controls="collapseExample">More</button> -->
+                                                                        </div>
+                                                                    </td>
+                                                                    <td><label class="frm-label-val">30/08/2022</label></td>
+                                                                    <td><label class="frm-label-val">Open</label></td>
+                                                                    <td><a href="#" class="highlight-txt" data-bs-toggle="modal" data-bs-target="#user1modal5"> Something</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="main-sec-mobile">
+                                                            <div class="header-bg">
+
+                                                            </div>
+                                                            <div class="header-body-bg">
+                                                                <div class="row">
+                                                                    <div class="col-md-1">
+                                                                        <div class="d-flex" style="justify-content: center;">
+                                                                            <div class="media"><img src="../images/musk.jpg" width="40" class="dropbtn" role="button"></div>
+                                                                            <div class="kebab">
+                                                                                <button type="button" class="kebab-btn-round" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                                </button>
+                                                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                                                    <li><button class="dropdown-iteam">Add Action</button></li>
+                                                                                    <li><button class="dropdown-iteam">Edit Action</button></li>
+                                                                                    <li><button class="dropdown-iteam">Copy Action</button></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2 ps-0">
+                                                                        <div class="media">
+                                                                            <div class="media-body view-application-body pl-2">
+                                                                                <h5><a href="#" data-bs-toggle="modal" data-bs-target="#user-name-mdl-1">John Matt</a></h5>
+                                                                                <label>Country - <span>United States</span></label>
+                                                                                <label>Email Id - <span>matt@jon.com</span></label>
+                                                                                <label>Phone No. - <span>085646 83326</span></label>
+                                                                                <!-- <button class="more_btn" data-bs-toggle="collapse"
+                                                                                data-bs-target="#collapseExample" aria-expanded="false"
+                                                                                aria-controls="collapseExample">More</button> -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-9">
+                                                                        <div class="row">
+                                                                            <!-- <div class="col-md-2 text-center">
+                                                                                <label class="frm-label">Constituent Summary</label>
+                                                                                <label class="frm-label-val">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dolores.</label>
+                                                                            </div> -->
+                                                                            <div class="col-md-4 mt-2">
+                                                                                <label class="frm-label pb-0">Date</label>
+                                                                                <label class="frm-label-val-2">30/08/2022</label>
+                                                                            </div>
+                                                                            <div class="col-md-4 mt-2">
+                                                                                <label class="frm-label pb-0">Status</label>
+                                                                                <label class="frm-label-val-2">Open</label>
+                                                                            </div>
+                                                                            <div class="col-md-4 mt-2">
+                                                                                <label class="frm-label pb-0">Action Summary</label>
+                                                                                <label class="frm-label-val-2">Something</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="collapse mt-3" id="collapseExample">
+                                                                    <div class="expandAllBtn">
+                                                                        <button type="button" class="btn expand-btn showAll" id="expandAll">Expand All</button>
+                                                                        <button type="button" class="btn collapse-btn hideAll" id="collapseAll" style="display: none;">Collapse All</button>
+                                                                    </div>
+                                                                    <div class="">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Share modal  -->
+<div class="modal fade" id="Share-modall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width: 55%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Share This List</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <form>
+                                <div class="row"></div>
+                                <label class="frm-label">Sharing link</label>
+                                <span class="light-txt">Copy this link to share</span>
+                                <div class="copy-txt d-flex mt-3">
+                                    <input type="text" class="form-control" value="" placeholder="Copy Link" disabled>
+                                    <i class="fa fa-clone icn" aria-hidden="true"></i>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer p-1">
+            <div class="row" style="width: 100%;">
+                <div class="col-md-3 col-12">
+                    <button class="custom-btn custom-success-btn">Save</button>
+                </div>
+                <div class="col-md-2 col-12 ps-0">
+                    <button class="custom-btn custom-danger-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Save modal  -->
+<div class="modal fade" id="Save-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width: 55%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Save List</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <form id="_actionlistSaveForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="frm-label">Name <span style="color: red;">*</span></label>
+                                        <input type="text" class="form-control" id="_txtSvname" name="SAVE_NAME" placeholder="Enter" maxlength="150" required />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="frm-label">Description</label>
+                                        <input type="text" class="form-control" id="_txtsvDescription" placeholder="Enter" name="SAVE_DESCRIPTION" maxlength="200" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <ul>
+                                        <li>
+                                            <input type="radio" name="save-action-radio" value="one_else_can_access"><label class="frm-label-2"> one else can access</label>
+                                        </li>
+                                        <li class="mt-2">
+                                            <input type="radio" name="save-action-radio" value="Others_can_view"><label class="frm-label-2"> Others can view</label>
+                                        </li>
+                                        <li class="mt-2">
+                                            <input type="radio" name="save-action-radio" value="Others_can_manage"><label class="frm-label-2"> Others can manage</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer p-1">
+                <div class="row" style="width: 100%;">
+                    <div class="col-md-3 col-12">
+                        <button type="button" class="custom-btn custom-success-btn" id="_BtnlistActinSave" data-form_target="#_actionlistSaveForm">Save</button>
+                    </div>
+                    <div class="col-md-2 col-12 ps-0">
+                        <button type="button" class="custom-btn custom-danger-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- coloumn modal  -->
+<div class="modal fade" id="column-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width: 55%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Choose columns to show in the list</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height: 500px; overflow-y: scroll; overflow-x: hidden;">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card-body filter-body">
+                            <form id="_formActionColumn">
+                                <div class="row">
+                                    <div class="col-md-12 search-bx">
+                                        <input type="text" class="form-control search-input-2" placeholder="Find In This List">
+                                        <span class="search-icn-4" style=" right: 11px; padding: 8px; top: 43px;"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <ul class="d-flex constituent-flter-secound-hdr">
+                                            <li class="first-hdr">
+                                                <button type="button" class="custom-btn primary-btn me-1" id="_btnOnlyShowdselected" data-status="true">Select All</button>
+                                            </li>
+                                            <li class="scnd-hdr">
+                                                <button type="button" class="custom-btn custom-danger-btn" id="_btnClearAllselected" data-status="false">Clear All</button>
+                                            </li>
+                                            <li class="ms-4 d-flex third-hdr">
+                                                <input type="checkbox" class="check-bx" id="_chckbxShowOnlySelected" style="margin-top: 2px;"><label class="frm-label-2 ms-1">Only show selected items</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <ul class="col-ul">
+                                            <li class="cntnt-sec b-none">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Action_assigned_to"><label class="frm-label-2 ms-1 dark-txt"> Action assigned to</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">Who performs the action</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Action_summary"><label class="frm-label-2 ms-1 dark-txt">Action summary</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">The type, constituent, and date of the action, and any additional notes</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Category"><label class="frm-label-2 ms-1 dark-txt">Category</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">The nature of the action, such as Meeting, Email, or Task/Other</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Constituent_assigned_to"><label class="frm-label-2 ms-1 dark-txt">Constituent assigned to</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">Who manages the constituent relationship</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Constituent_ID"><label class="frm-label-2 ms-1 dark-txt">Constituent ID</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">The lookup ID of the constituent's record</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Constituent_summary"><label class="frm-label-2 ms-1 dark-txt">Constituent summary</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">Name and contact information of the constituent related to the action</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Date"><label class="frm-label-2 ms-1 dark-txt">Date</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">When the action is scheduled to occur</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Opportunity"><label class="frm-label-2 ms-1 dark-txt">Opportunity</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">The name, purpose, and status of the opportunity the action supports</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Status"><label class="frm-label-2 ms-1 dark-txt">Status</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">Whether the action is completed, past due, or neither</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2" value="Type"><label class="frm-label-2 ms-1 dark-txt">Type</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">Details about the action based on its category, such as the type of mailing or meeting</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer p-1">
+                <div class="row" style="width: 100%;">
+                    <div class="col-md-3 col-12">
+                        <button class="custom-btn custom-success-btn" id="btnColumnSaveChanges" data-form_target="#_formActionColumn">Apply Changes</button>
+                    </div>
+                    <div class="col-md-4 col-12 pe-0">
+                        <button class="custom-btn primary-btn" id="btnColumnBydefoult">Set As Default Filters</button>
+                    </div>
+                    <div class="col-md-2 col-12 ps-0">
+                        <button class="custom-btn custom-danger-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modals  -->
+<div class="modal fade opn_saved_lst" id="opn_saved_lst" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Open List</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-7">
+                        <label class="frm-label"></label>
+                        <input type="text" id="" class="form-control input-search" placeholder="Search" /><span class="search-icn-2"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- filter modal -->
+<div class="modal fade" id="filter-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width: 55%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Choose Your Filters</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height: 500px; overflow-y: scroll; overflow-x: hidden;">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card-body filter-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12 search-bx">
+                                        <input type="text" class="form-control search-input-2" placeholder="Find In This List">
+                                        <span class="search-icn-4" style=" right: 11px; padding: 8px; top: 43px;"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <ul class="d-flex constituent-flter-secound-hdr">
+                                            <li class="first-hdr">
+                                                <button type="button" class="custom-btn primary-btn me-1">Select All</button>
+                                            </li>
+                                            <li class="scnd-hdr">
+                                                <button type="button" class="custom-btn custom-danger-btn">Clear All</button>
+                                            </li>
+                                            <li class="ms-4 d-flex third-hdr">
+                                                <input type="checkbox" class="check-bx" style="margin-top: 2px;"><label class="frm-label-2 ms-1">Only show selected items</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <ul>
+                                            <li class="cntnt-sec b-none">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt"> Action Catagory</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">The nature of the action, such as a meeting or email</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt">Action Status</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">Date when the action is scheduled to occur</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt">Action Status Code</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">The action status tracked in the action status code table in Raiser's Edge 7</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt">Action Type</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">Details about the action based on its category, such as the type of mailing or meeting</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt">Fundraiser</label>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="frm-label-val ms-4 light-txt">Who performs the action</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer p-1">
+                <div class="row" style="width: 100%;">
+                    <div class="col-md-3 col-6">
+                        <button class="custom-btn custom-success-btn">Apply Changes</button>
+                    </div>
+                    <div class="col-md-4 col-6 pe-0">
+                        <button class="custom-btn primary-btn">Set As Default Filters</button>
+                    </div>
+                    <div class="col-md-2 col-4 ps-0">
+                        <button class="custom-btn custom-danger-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- action type modal -->
+<div class="modal fade" id="action-type-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width: 55%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Action Type</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height: 500px; overflow-y: scroll; overflow-x: hidden;">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card-body filter-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12 search-bx">
+                                        <input type="text" class="form-control search-input-2" placeholder="Find In This List">
+                                        <span class="search-icn-4" style=" right: 11px; padding: 8px; top: 43px;"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <ul class="d-flex constituent-flter-secound-hdr">
+                                            <li class="first-hdr">
+                                                <button type="button" class="custom-btn primary-btn me-1">Select All</button>
+                                            </li>
+                                            <li class="scnd-hdr">
+                                                <button type="button" class="custom-btn custom-danger-btn">Clear All</button>
+                                            </li>
+                                            <li class="ms-4 d-flex third-hdr">
+                                                <input type="checkbox" class="check-bx" style="margin-top: 2px;"><label class="frm-label-2 ms-1">Only show selected items</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <ul>
+                                            <li class="cntnt-sec b-none">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt"> No Action Type</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt"> Action Items</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt"> Annual Report</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt"> Discussion</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cntnt-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12 d-flex">
+                                                        <input type="checkbox" class="check-bx-2"><label class="frm-label-2 ms-1 dark-txt"> Event Invitation</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer p-1">
+                <div class="row" style="width: 100%;">
+                    <div class="col-md-2 col-6">
+                        <button class="custom-btn custom-success-btn">Apply</button>
+                    </div>
+                    <div class="col-md-2 col-6 pe-0">
+                        <button class="custom-btn primary-btn">Clear</button>
+                    </div>
+                    <div class="col-md-2 col-4 ps-0">
+                        <button class="custom-btn custom-danger-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- action date modal -->
+<div class="modal fade" id="action-date-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width: 55%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Action date</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height: 500px; overflow-y: scroll; overflow-x: hidden;">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="frm-label">Sction Date</label>
+                                        <select class="form-control">
+                                            <option>Select Date</option>
+                                            <option>At Any Time</option>
+                                            <option>This Year</option>
+                                            <option>Last Year</option>
+                                            <option>Next Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer p-1">
+                <div class="row" style="width: 100%;">
+                    <div class="col-md-2 col-6">
+                        <button class="custom-btn custom-success-btn">Apply</button>
+                    </div>
+                    <div class="col-md-2 col-6 pe-0">
+                        <button class="custom-btn primary-btn">Clear</button>
+                    </div>
+                    <div class="col-md-2 col-4 ps-0">
+                        <button class="custom-btn custom-danger-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@{Html.RenderPartial("~/Views/Shared/_UserPartialModal.cshtml"); }
+
+<!--Toggle js-->
+@*
+<script src="~/js/toggle.js"></script>
+<script src="~/js/mobile_toggle.js"></script>
+<script src="~/js/table.js"></script>
+<script src="~/js/collapse.js"></script>*@
+<script src="~/Assets/Scripts/Action-List.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+

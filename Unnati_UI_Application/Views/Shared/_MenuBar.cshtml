@@ -1,0 +1,239 @@
+﻿
+
+
+<header class="layout-header sticky-top animate__animated animate__fadeInDown">
+    <div class="top-header shadow-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-2 big-screen-logo">
+                    <div class="logo-container big-screen-logo light-mood-logo">
+                        <a href="@Url.Action("Dashboard","Dashboard")"><img src="~/images/logo.jpg" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-xl-10 col-lg-12">
+                    <div class="top-header-content">
+                        <div class="mobile-header--right d-xl-none">
+                            <a href="#mobile-menu-offcanvas" class="mobile-menu offcanvas-toggle">
+                                <span class="mobile-menu-dash"></span>
+                                <span class="mobile-menu-dash"></span>
+                                <span class="mobile-menu-dash"></span>
+                            </a>
+                        </div>
+                        <div class="profile-info-wrap">
+                            <div class="profile-info">
+                                <ul class="profile-cred-list">
+                                    <li class="profile-name">Akash Roy</li>
+                                    <li class="profile-desig">Operation Manager</li>
+                                </ul>
+                            </div>
+                            <div class="profile-img-wrap">
+                                <div class="profile-img-container">
+                                    <img src="~/images/musk.jpg" width="40" class="dropbtn" role="button" onclick="profileFunction();" />
+                                </div>
+                                <div id="profile-dropdown" class="dropdown-content shadow-main">
+                                    <ul class="pop-profile-list">
+                                        <li>
+                                            <a href="#"><i data-feather="user"></i>&nbsp;Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="help-circle"></i>&nbsp;Help</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i data-feather="settings"></i>&nbsp;Settings</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/index.html"><i data-feather="log-out"></i>&nbsp;Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-header">
+        <div class="container-fluid">
+            <div class="header-layout">
+                <nav class="nav-menu shadow-main">
+                    <ul class="nav-menu-list">
+                        <li>
+                            <a href="@Url.Action("Dashboard","Dashboard")"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp; dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" class="active"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp; Fundraising <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="#"> Work</a></li>
+                                    <li><a href="@Url.Action("GiftManagement","FundRaisingList")"> Gift Management</a></li>
+                                    <li><a href="#"> Reporting</a></li>
+                                    <li><a href="@Url.Action("Constituent","Constituent")"> Add Constituent</a></li>
+                                    <li><a href="donation-summary.html"> Donation Summary</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp; Marketing <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="~/marketing/social.html"> Social</a></li>
+                                    <li class="drop-dwn-hvr">
+                                        <a href="#"> Email  &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                        <div class="drop-down-menu-2 shadow-main" style="top: 57px;">
+                                            <ul>
+                                                <li><a href="@Url.Action("add_user","User_Management")">Compose Email</a></li>
+                                                <li><a href="@Url.Action("add_user","User_Management")"> Sent Email</a></li>
+                                                <li><a href="@Url.Action("add_user","User_Management")">Email Groups</a></li>
+                                                <li><a href="@Url.Action("add_user","User_Management")">Email Templates</a></li>
+                                                <li><a href="@Url.Action("add_user","User_Management")">Unsubscribed Users</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="drop-dwn-hvr">
+                                        <a href="#"> Events &nbsp;<i class="fa fa-angle-down dropdown-arrow-2 ml-2" aria-hidden="true"></i></a>
+                                        <div class="drop-down-menu-2 shadow-main">
+                                            <ul>
+                                                <li><a href="@Url.Action("add_user","User_Management")"> View All Events</a></li>
+                                                <li><a href="@Url.Action("add_user","User_Management")"> Create An Event</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-list" aria-hidden="true"></i>&nbsp; List <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="@Url.Action("ActionIndex","List")"> Action</a></li>
+                                    <li><a href="@Url.Action("ConstituentView","List")">Constituent</a></li>
+                                    <li><a href="@Url.Action("GiftView","List")"> Gift</a></li>
+                                    <li><a href="@Url.Action("OpportunitiesView","List")"> Opportunities</a></li>
+                                    <li><a href="@Url.Action("MOUView","List")"> MOU</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; user management <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="@Url.Action("add_role","User_Management")"> Add Role</a></li>
+                                    <li><a href="@Url.Action("add_user","User_Management")"> Add user</a></li>
+                                    <li><a href="@Url.Action("view_user","User_Management")"> View user</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp; Website <i class="fa fa-angle-down dropdown-arrow ml-2" aria-hidden="true"></i></a>
+                            <div class="drop-down-menu shadow-main">
+                                <ul>
+                                    <li><a href="">News</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li><a href="#">Media</a></li>
+                                    <li><a href="#"> Awards</a></li>
+                                    <li><a href="#"> Sponsered Projects</a></li>
+                                    <li><a href="#"> Newsletter</a></li>
+                                    <li><a href="#"> Our Team</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ...:::: Start Offcanvas Mobile Menu Section:::... -->
+<div id="mobile-menu-offcanvas" class="offcanvas offcanvas-leftside offcanvas-mobile-menu-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <div class="logo-container">
+            <a href="~/dashboard.html"><img src="~/images/logo.jpg" alt="titan-logo" class="img-fluid" /></a>
+        </div>
+        <div class="">
+            <button class="offcanvas-close"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+    <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-mobile-menu-wrapper">
+        <!-- Start Mobile Menu Center -->
+        <div class="mobile-menu-center">
+            <!-- Start Mobile Menu Nav -->
+            <div class="offcanvas-menu">
+                <ul>
+                    <li><a href="@Url.Action("Dashboard","Dashboard")">dashboard</a></li>
+
+                    <li>
+                        <a href="#"><span>Fundraising</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="#"> Work</a></li>
+                            <li><a href="#"> Gift Management</a></li>
+                            <li><a href="#"> Reporting</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>Marketing</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="#"> Social</a></li>
+                            <li><a href="#"> Email</a></li>
+                            <li>
+                                <a href="#"> Events</a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="~/view-events.html"> View All Events</a></li>
+                                    <li><a href="~/create-events.html"> Create An Event</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>List</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="#"> Action</a></li>
+                            <li><a href="~/Constituent.html">Constituent</a></li>
+                            <li><a href="#"> Gift</a></li>
+                            <li><a href="#"> Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>Control Panel</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="#"> Security</a></li>
+                            <li><a href="#"> Settings</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>user management</span></a>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="~/add-user.html">add user</a></li>
+                            <li><a href="~/view-user.html">view user</a></li>
+                            <!-- <li><a href="~/user/external-user.html">external user</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Mobile Menu Nav -->
+        </div>
+        <!-- End Mobile Menu Center -->
+    </div>
+    <!-- End Offcanvas Mobile Menu Wrapper -->
+</div>
+<!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+@*<section class="layout-body">
+        <div class="container-fluid">
+            <div class="card-wrap main_panel shadow-main">
+                <div class="card-wrap-body cus-body-wrap">
+                    <div class="all-wrap mt-2 animate__animated animate__zoomIn">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+<script>
+    feather.replace();
+</script>
+
